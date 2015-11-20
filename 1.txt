@@ -1,0 +1,12 @@
+ackson json转实体 com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException
+jackson 2.2.2
+
+由于vo中缺少json的某个字段属性引起
+
+2种解决方法
+
+1：vo中添加注解@JsonIgnoreProperties(ignoreUnknown = true)
+
+String类型的字符串转换日期类型存在问题
+
+ 
