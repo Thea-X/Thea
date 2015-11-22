@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>水平导航</title>
+	<style type="text/css">
+		.list1 ul {
+			/*强制ul包围浮动的li元素*/
+			overflow: hidden;
+		}
+
+		.list1 li {
+			float: left;
+			list-style-type: none;
+		}
+
+		.list1 a {
+			display: block;
+			padding: 0 16px;
+			text-decoration: none;
+			color: #999;
+		}
+		
+		.list1 li + li a {
+			border-left: 1px solid #aaa;
+		}
+
+		.list1 a:hover {color: #555;}
+
+	</style>
+</head>
+<body>
+	<nav class="list1">
+		<ul>
+			<li><a href="#">Alternative</a></li>
+			<li><a href="#">Country</a></li>
+			<li><a href="#">Jazz</a></li>
+			<li><a href="#">Rock</a></li>
+		</ul>
+	</nav>
+</body>
+</html>
