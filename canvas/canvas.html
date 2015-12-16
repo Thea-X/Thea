@@ -4,21 +4,36 @@
 	<meta charset="UTF-8">
 	<title>Canvas 学习</title>
 </head>
-<body>
-	<canvas id="canvas" width="1152" height="768" style="border: 1px solid black;">
+<body style="background: black;">
+	<canvas id="canvas" width="500" height=500 style="border: 1px solid black;">
 		对不起，您的浏览器不支持canvas
-	</canvas>
+	</canvas><br>
+	<input type="range" id="scale-range" min="0.5" max="3" style="width:300px; display: block; margin: 0 auto;">
 	<script type="text/javascript">
 		var canvas = document.getElementById("canvas");
 		var context = canvas.getContext("2d");
 		var img = new Image();
-
+		var scale = document.getElementById("scale-range");
 		window.onload = function(){
 			img.src = "1.jpg";
 			img.onload = function(){
-				context.drawImage(img,0,0);
+				context.drawImage(img,0,0,canvas.width,canvas.height);//scaleImg(scale);
 			}
+
+			scale.onmousemove = function(){
+				console.log(this.value);
+				scaleImg(this.value);
+			};
 		};
+
+		function scaleImg(scale){
+			var width = 500 * scale;
+			var height = 500 * scale;
+			var dw = canvas.width/2 - width/2;
+			var dh = canvas.height/2 - height/2;
+			//context.clearRe
+			context.drawImage(img,dw,dh,width,height);
+		}
 	</script>
 </body>
 </html>
