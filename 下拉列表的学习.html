@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+<select id="ts">
+    <option value="1">1</option>
+    <option value="2">Lorem ipsum dolor s.</option>
+    <option value="3">3</option>
+    <option value="3">4</option>
+    <option value="3">5</option>
+</select>
+
+<input type="button" id="click" value="Click"/>
+<script src="http://lib.sinaapp.com/js/jquery/1.9.1/jquery-1.9.1.min.js"></script>
+
+<script type="text/javascript">
+    
+    $(function(){
+        $("#click").click(function(){
+           var length = document.getElementById("ts").length;
+            $("#ts").attr('size',length);
+        });
+    });
+
+</script>
+</body>
+</html>
