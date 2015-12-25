@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css的居中的学习</title>
+	<style type="text/css">
+		.oneline-text-v {
+			height: 100px;
+			background: #eee;
+			line-height: 100px;
+			border: 1px solid #red;
+			border-radius: 5px;
+			text-align: center;
+			margin-bottom: 10px;			
+		}
+
+		.pos-re {
+			height: 100px;
+			background: gray;
+			position: relative;
+		}
+
+		.ab-v {
+			position: absolute;
+			top: 50%;
+			margin-top: -25px;
+			height: 50px;
+			width: 50px;
+			background: red;
+		}
+
+	</style>
+</head>
+<body>
+	<section>
+		<h4>单行文本的垂直居中</h4>
+		<div class="oneline-text-v">content</div>
+	
+		<h4>只对单行文本起作用，对图片是不起作用噢亲</h4>
+		<div class="oneline-text-v"><img src="http://avatar.csdn.net/6/4/0/1_freshlover.jpg" width="50" height="50"></div>
+	</section>
+	<section class="pos-re">
+		<h4>使用absolute top:50%; margin-top: -height/2</h4>
+		<div class="ab-v"></div>
+	</section>
+	<section class="pos-re">
+		<h4>对图片也支持</h4>
+		<img src="http://avatar.csdn.net/6/4/0/1_freshlover.jpg" class="ab-v">
+	</section>
+</body>
+</html>
