@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用ul和li实现表格</title>
+	<style type="text/css">
+		*{
+			margin: 0 auto;
+			padding: 0px;
+			list-style: none;
+		} 
+		/*定义表格区域大小和边框等参数*/
+		.e{
+			width: 500px;
+			border-top: solid #f00 1px;
+			border-left: 1px solid #f00; 
+			/*此处的display:table 和overflow：hidden的效果是相同的原理尚不明确*/
+		   /* 	display: table;  */
+			overflow: hidden;
+			margin-top: 50px;
+		}
+		/*一定要记着让LI向左浮动，这样后边的才会自动跟进*/
+		li{float: left;}
+		/*定义表格表头等*/
+		.id,.name,.x,.z,.d{
+			color: #999;
+			font-size: 12px;
+			text-align: center;
+			border-right: 1px solid #f00;
+			border-bottom: 1px solid #f00;
+			height: 22px;
+			line-height: 22px;
+		}
+		.id{width: 20px;}
+		/*以下定义表格每列的宽度*/
+		.name{width: 50px;}
+		.x{width: 30px;}
+		.z{width: 30px;}
+		.d{width: 365px;}
+	</style>
+</head>
+<body>
+	<div class="e">
+		<ul>
+			<li class="id">ID</li>
+			<li class="name">名字</li>
+			<li class="x">性别</li>
+			<li class="z">年龄</li>
+			<li class="d">地址</li>
+		</ul>
+		<ul>
+			<li class="id">1</li>
+			<li class="name">本山</li>
+			<li class="x">女</li>
+			<li class="z">22</li>
+			<li class="d">北京</li>
+		</ul>
+		<ul>
+			<li class="id">2</li>
+			<li class="name">小曾</li>
+			<li class="x">男</li>
+			<li class="z">26</li>
+			<li class="d">上海</li>
+	 	</ul>
+ 	</div>
+</body>
+</html>
