@@ -28,7 +28,35 @@
 			width: 50px;
 			background: red;
 		}
+		
+		.wrapper {
+			background: yellow;
+			display: table;
+			width: 200px;
+			height: 200px;
+		}
 
+		.cell {
+			display: table-cell;
+			vertical-align: middle;
+		}
+
+		.center-container {
+			width: 200px;
+			height: 200px;
+		    position: relative;
+		    background: yellow;
+		}
+		 
+		.absolute-center {
+			background: red;
+		    width: 50%;
+		    height: 50%;
+		    overflow: auto;
+		    margin: auto;
+		    position: absolute;
+		    top: 0; left: 0; bottom: 0; right: 0;
+		}
 	</style>
 </head>
 <body>
@@ -43,9 +71,34 @@
 		<h4>使用absolute top:50%; margin-top: -height/2</h4>
 		<div class="ab-v"></div>
 	</section>
+
 	<section class="pos-re">
 		<h4>对图片也支持</h4>
 		<img src="http://avatar.csdn.net/6/4/0/1_freshlover.jpg" class="ab-v">
+	</section>
+	<section>
+		<h4>使用position:table相关的属性</h4>
+		<div class="wrapper">
+			<div class="cell">
+				<div>我是内容</div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h4>使用position:table相关的属性图片验证 no problem!</h4>
+		<div class="wrapper">
+			<div class="cell">
+				 <img src="http://avatar.csdn.net/6/4/0/1_freshlover.jpg" width="50" height="50"></div>
+			</div>
+		</div>
+	</section>
+
+	<section>
+		<h4>绝对居中,我在项目中使用了这种方法但是原理不明</h4>
+		<div class="center-container">
+			<div class="absolute-center"></div>
+		</div>
 	</section>
 </body>
 </html>
