@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>使用CSS的table属性创建表格的布局</title>
+	<style type="text/css">
+		.main {
+			width: 100%;
+			display: table;
+			border-collapse: collapse;
+		}
+		.main>div {
+			display: table-row;
+			border-bottom: 1px solid #eee;
+		}
+		.nav,.extra,.extra1{
+			width: 20%;
+			display: table-cell;
+			height: 400px;
+			background: red;
+		}
+
+		.content {
+			width: 60%;
+			display: table-cell;
+			height: 400px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main">
+			<div>
+				<div class="nav"></div>
+				<div class="content"></div>
+				<div class="extra"></div>
+			</div>
+			<div>
+				<div class="nav"></div>
+				<div class="content"></div>
+				<div class="extra"></div>
+			</div>
+			<div>
+				<div class="extra1"></div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
